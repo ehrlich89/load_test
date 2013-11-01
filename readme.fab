@@ -1,0 +1,26 @@
+Hello world.
+
+I have had a look at the program and I came out with a skeleton plan.
+I propose the load tester to be as follows.
+create a player thread(class),
+the thread will act like a normal player by 
+first send 'init' request and initilise itself
+then send  'join' requet and join the game.
+then send random play commands. ie a function called play that will play automatically by sending random commands to the server.
+I have some variables like rtt(round_trip_time) for the player thread that stores the severs response time each time the thread sends a command(ie, 'init','join','move_ıp' etc)
+and an artt(average_round_trip_time) variable that stores the overall servers response time for.
+ Then increment these threads and look at how the 'artt' and other variables behave when the number of players(threads) increase.
+
+ I am currently blocked with a "message protocol"
+ User.send()
+ {
+ .......
+		else if (SERVER2CLIENT[action].param[i] == 's')
+		{
+			//@fab
+			System.out.println("sending (String):");
+			bufferedOut.write((byte[])args[i], 0, Config.STRING_LENGTH); // Write String with constant length
+		}
+.....
+}
+ 
